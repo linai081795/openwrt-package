@@ -4,7 +4,6 @@ Rclone-OpenWrt
 UnblockNeteaseMusic-Go
 UnblockNeteaseMusic
 Wiwiz-PinPinWiFi
-adbyby
 adguardhome
 alist
 alist2
@@ -48,7 +47,6 @@ libcryptopp
 lua-maxminddb
 luci-app-3ginfo
 luci-app-accesscontrol
-luci-app-adbyby-plus
 luci-app-adguardhome
 luci-app-advanced
 luci-app-alist
