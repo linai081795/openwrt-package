@@ -42,6 +42,7 @@ luci-app-filebrowser
 luci-app-gost
 luci-app-ikoolproxy
 luci-app-iptvhelper
+luci-app-istoreenhance
 luci-app-istorex
 luci-app-linkease
 luci-app-lucky
