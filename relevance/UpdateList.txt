@@ -28,6 +28,7 @@ luci-app-ddnsto
 luci-app-eqosplus
 luci-app-gost
 luci-app-ikoolproxy
+luci-app-istoreenhance
 luci-app-istorex
 luci-app-linkease
 luci-app-lucky
