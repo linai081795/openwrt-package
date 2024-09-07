@@ -23,11 +23,15 @@ cgroupfs-mount
 chinadns-ng
 clud
 containerd
+cpulimit-ng
+cpulimit
 ddns-go
 ddns-scripts_dnspod
 docker
 dockerd
+dos2unix
 dsmboot
+filebrowser
 frp
 gost
 iptvhelper
@@ -136,6 +140,7 @@ luci-lib-iform
 luci-lib-nixio
 luci-nginxer
 lucky
+mentohust
 mosdns
 mosdnszz
 msd_lite
@@ -149,6 +154,7 @@ oaf
 open-app-filter
 openwrt-subconverter
 openwrt-tmate
+oscam
 parted
 qBittorrent-static
 qBittorrent
@@ -160,9 +166,14 @@ rclone-webui-react
 rclone
 runc
 shadowsocks-libev
+smartmontools
+socat
+softethervpn
 switch-lan-play
+syncthing
 tini
 ucl
+udp2raw
 upx
 uugamebooster
 v2dat
