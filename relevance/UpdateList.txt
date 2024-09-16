@@ -162,9 +162,6 @@ qBittorrent-static
 qBittorrent
 qtbase
 qttools
-r8101
-r8125
-r8168
 rblibtorrent
 rclone-ng
 rclone-webui-react
