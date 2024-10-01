@@ -6,12 +6,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=shadowsocks-rust
-PKG_VERSION:=1.20.3
+PKG_VERSION:=1.21.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/shadowsocks/shadowsocks-rust/tar.gz/v$(PKG_VERSION)?
-PKG_HASH:=07d2301cb14d8e1ff653def167604e701ca9a05a140291875e0ec9e6334ad513
+PKG_HASH:=4891475a2389676e4fd3250bb579ffa7d1ad0bc9e3987c3e293c8f3a8a37bded
 
 PKG_MAINTAINER:=Tianling Shen <cnsztl@immortalwrt.org>
 PKG_LICENSE:=MIT
