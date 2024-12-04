@@ -20,7 +20,6 @@ luci-app-autoipsetadder
 luci-app-autotimeset
 luci-app-chatgpt
 luci-app-chinadns-ng
-luci-app-cifsd
 luci-app-cloudflarespeedtest
 luci-app-cupsd
 luci-app-ddns-go
