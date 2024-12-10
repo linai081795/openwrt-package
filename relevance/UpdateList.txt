@@ -25,6 +25,7 @@ luci-app-cupsd
 luci-app-ddns-go
 luci-app-ddnsto
 luci-app-eqosplus
+luci-app-floatip
 luci-app-gost
 luci-app-ikoolproxy
 luci-app-istoreenhance
