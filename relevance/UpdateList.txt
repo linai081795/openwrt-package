@@ -43,6 +43,7 @@ luci-app-ddnsto
 luci-app-dockerman
 luci-app-eqosplus
 luci-app-filebrowser
+luci-app-floatip
 luci-app-gost
 luci-app-ikoolproxy
 luci-app-iptvhelper
