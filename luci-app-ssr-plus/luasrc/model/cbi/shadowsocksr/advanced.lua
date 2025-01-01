@@ -113,6 +113,17 @@ o = s:option(Flag, "apple_optimization", translate("Apple domains optimization")
 o.rmempty = false
 o.default = "1"
 
+o = s:option(Value, "apple_url", translate("Apple Domains Update url"))
+o:value("https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/apple.china.conf", translate("felixonmars/dnsmasq-china-list"))
+o.default = "https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/apple.china.conf"
+o:depends("apple_optimization", "1")
+
+o = s:option(Value, "apple_dns", translate("Apple Domains DNS"), translate("If empty, Not change Apple domains parsing DNS (Default is empty)"))
+o.rmempty = true
+o.default = ""
+o.datatype = "ip4addr"
+o:depends("apple_optimization", "1")
+
 o = s:option(Flag, "adblock", translate("Enable adblock"))
 o.rmempty = false
 
@@ -125,8 +136,11 @@ o:depends("adblock", "1")
 o.description = translate("Support AdGuardHome and DNSMASQ format list")
 
 o = s:option(Button, "reset", translate("Reset to defaults"))
-o.rawhtml = true
-o.template = "shadowsocksr/reset"
+o.inputstyle = "reload"
+o.write = function()
+	luci.sys.call("/etc/init.d/shadowsocksr reset")
+	luci.http.redirect(luci.dispatcher.build_url("admin", "services", "shadowsocksr", "servers"))
+end
 
 -- [[ SOCKS5 Proxy ]]--
 s = m:section(TypedSection, "socks5_proxy", translate("Global SOCKS5 Proxy Server"))

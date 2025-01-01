@@ -11,6 +11,7 @@ mosdns
 naiveproxy
 redsocks2
 shadow-tls
+shadowsocks-libev
 shadowsocks-rust
 shadowsocksr-libev
 simple-obfs
