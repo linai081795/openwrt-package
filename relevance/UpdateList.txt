@@ -11,6 +11,7 @@ luci-app-passwall2
 microsocks
 naiveproxy
 pdnsd-alt
+shadowsocks-libev
 shadowsocks-rust
 shadowsocksr-libev
 simple-obfs
@@ -23,6 +24,7 @@ trojan
 tuic-client
 v2ray-core
 v2ray-geodata
+v2ray-geoview
 v2ray-plugin
 xray-core
 xray-plugin
