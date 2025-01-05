@@ -2,6 +2,7 @@ brook
 chinadns-ng
 dns2socks
 dns2tcp
+geoview
 gn
 hysteria
 ipt2socks
@@ -24,7 +25,6 @@ trojan
 tuic-client
 v2ray-core
 v2ray-geodata
-v2ray-geoview
 v2ray-plugin
 xray-core
 xray-plugin
