@@ -1,4 +1,3 @@
-brook
 chinadns-ng
 dns2socks
 dns2tcp
@@ -19,7 +18,6 @@ simple-obfs
 sing-box
 ssocks
 tcping
-trojan-go
 trojan-plus
 trojan
 tuic-client
