@@ -18,6 +18,7 @@ filebrowser
 gost
 iptvhelper
 lua-maxminddb
+luasrc
 luci-app-3ginfo
 luci-app-adguardhome
 luci-app-advanced
