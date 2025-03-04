@@ -1,5 +1,6 @@
 3ginfo
 OpenAppFilter
+OpenWrt-nikki
 Rclone-OpenWrt
 Wiwiz-PinPinWiFi
 adguardhome
@@ -56,6 +57,7 @@ luci-app-mosdns
 luci-app-msd_lite
 luci-app-natter
 luci-app-nginx-manager
+luci-app-nikki
 luci-app-nodogsplash
 luci-app-oaf
 luci-app-oled
@@ -93,6 +95,7 @@ nas-packages-luci
 nas-packages
 natter
 network
+nikki
 oaf
 open-app-filter
 openwrt-subconverter
