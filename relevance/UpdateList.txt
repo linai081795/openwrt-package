@@ -14,7 +14,6 @@ app-lucky
 ardhome
 assets
 autocore
-autosamba
 baidupcs-go
 baidupcs-web
 bcm27xx-eeprom
@@ -28,8 +27,6 @@ cpulimit-ng
 cpulimit
 ddns-go
 ddns-scripts_dnspod
-docker
-dockerd
 dos2unix
 dsmboot
 filebrowser
@@ -40,7 +37,6 @@ ipv6-helper
 k3screenctrl
 k3wifi
 kcptun
-kerman
 libcryptopp
 lua-maxminddb
 luci-app-3ginfo
@@ -68,7 +64,6 @@ luci-app-cupsd
 luci-app-ddns-go
 luci-app-ddnsto
 luci-app-diskman
-luci-app-dockerman
 luci-app-eqosplus
 luci-app-fileassistant
 luci-app-filebrowser
@@ -137,7 +132,6 @@ luci-app-wolplus
 luci-app-wrtbwmon
 luci-app-xlnetacc
 luci-app-zerotier
-luci-lib-docker
 luci-lib-fs
 luci-lib-iform
 luci-lib-nixio
