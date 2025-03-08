@@ -132,7 +132,6 @@ luci-app-verysync
 luci-app-vlmcsd
 luci-app-vsftpd
 luci-app-wifidog
-luci-app-wolplus
 luci-app-wrtbwmon
 luci-app-xlnetacc
 luci-app-zerotier
