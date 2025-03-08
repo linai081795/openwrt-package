@@ -8,7 +8,6 @@ ardhome
 chinadns-ng
 ddns-go
 gost
-kcptun
 larespeedtest
 lua-maxminddb
 luci-app-3ginfo
@@ -51,7 +50,6 @@ luci-app-tcpdump
 luci-app-tencentddns
 luci-app-ttnode
 luci-app-wifidog
-luci-app-wolplus
 luci-lib-iform
 luci-nginxer
 lucky
@@ -63,7 +61,6 @@ nas-packages-luci
 nas-packages
 natter
 network
-shadowsocks-libev
 switch-lan-play
 upx-static
 v2dat
