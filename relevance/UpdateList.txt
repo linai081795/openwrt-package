@@ -10,7 +10,6 @@ app-lucky
 ardhome
 assets
 cdnspeedtest
-chinadns-ng
 clud
 cpulimit-ng
 cpulimit
