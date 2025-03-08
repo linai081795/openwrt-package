@@ -20,7 +20,6 @@ bcm27xx-eeprom
 bcm27xx-userland
 cdnspeedtest
 cgroupfs-mount
-chinadns-ng
 clud
 containerd
 cpulimit-ng
