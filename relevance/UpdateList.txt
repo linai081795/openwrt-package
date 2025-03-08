@@ -14,7 +14,6 @@ app-lucky
 ardhome
 assets
 autocore
-autosamba
 baidupcs-go
 baidupcs-web
 bcm27xx-eeprom
@@ -171,7 +170,6 @@ rclone-ng
 rclone-webui-react
 rclone
 runc
-shadowsocks-libev
 smartmontools
 socat
 softethervpn
