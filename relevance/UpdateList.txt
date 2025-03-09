@@ -51,7 +51,6 @@ luci-app-autoreboot
 luci-app-autotimeset
 luci-app-baidupcs-web
 luci-app-chatgpt
-luci-app-chinadns-ng
 luci-app-cifs-mount
 luci-app-clash
 luci-app-cloudflarespeedtest
