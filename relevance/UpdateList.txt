@@ -5,7 +5,6 @@ aliyundrive-fuse
 aliyundrive-webdav
 app-lucky
 ardhome
-chinadns-ng
 ddns-go
 gost
 larespeedtest
@@ -18,7 +17,6 @@ luci-app-amlogic
 luci-app-autoipsetadder
 luci-app-autotimeset
 luci-app-chatgpt
-luci-app-chinadns-ng
 luci-app-cloudflarespeedtest
 luci-app-cupsd
 luci-app-ddns-go
