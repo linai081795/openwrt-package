@@ -5,7 +5,6 @@ luci-app-design-config
 luci-app-netkeeper-interception
 luci-app-smartdns
 luci-proto-netkeeper
-luci-theme-alpha
 luci-theme-argon
 luci-theme-design
 luci-theme-kucat
