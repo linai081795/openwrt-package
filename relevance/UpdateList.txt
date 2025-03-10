@@ -31,6 +31,7 @@ docker
 dockerd
 dos2unix
 dsmboot
+feed-netkeeper
 filebrowser
 frp
 gost
@@ -46,9 +47,11 @@ luci-app-3ginfo
 luci-app-accesscontrol
 luci-app-adguardhome
 luci-app-advanced
+luci-app-advancedplus
 luci-app-alist
 luci-app-aliyundrive-webdav
 luci-app-amlogic
+luci-app-argon-config
 luci-app-arpbind
 luci-app-autoipsetadder
 luci-app-autoreboot
@@ -65,6 +68,7 @@ luci-app-cpulimit
 luci-app-cupsd
 luci-app-ddns-go
 luci-app-ddnsto
+luci-app-design-config
 luci-app-diskman
 luci-app-dockerman
 luci-app-eqosplus
@@ -88,6 +92,7 @@ luci-app-mosdns
 luci-app-msd_lite
 luci-app-mwan3helper
 luci-app-netdata
+luci-app-netkeeper-interception
 luci-app-nfs
 luci-app-nginx-manager
 luci-app-nikki
@@ -111,10 +116,12 @@ luci-app-ramfree
 luci-app-rclone
 luci-app-serverchan
 luci-app-shutdown
+luci-app-smartdns
 luci-app-smartinfo
 luci-app-socat
 luci-app-softethervpn
 luci-app-ssr-mudb-server
+luci-app-ssr-plus
 luci-app-store
 luci-app-supervisord
 luci-app-switch-lan-play
@@ -139,6 +146,10 @@ luci-lib-fs
 luci-lib-iform
 luci-lib-nixio
 luci-nginxer
+luci-proto-netkeeper
+luci-theme-argon
+luci-theme-design
+luci-theme-kucat
 lucky
 mentohust
 mosdns
@@ -148,11 +159,16 @@ mt
 multimedia
 nas-packages-luci
 nas-packages
+netkeeper-interception
+netkeeper
 network
 nikki
 nps
 oaf
 open-app-filter
+openwrt-passwall-packages
+openwrt-passwall
+openwrt-passwall2
 openwrt-subconverter
 openwrt-tmate
 oscam
@@ -166,6 +182,7 @@ rclone-ng
 rclone-webui-react
 rclone
 runc
+smartdns
 smartmontools
 socat
 softethervpn
