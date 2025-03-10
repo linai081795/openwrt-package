@@ -1,5 +1,7 @@
 3ginfo
 OpenAppFilter
+OpenClashdev
+OpenClashmaster
 OpenWrt-nikki
 Rclone-OpenWrt
 Wiwiz-PinPinWiFi
