@@ -66,6 +66,8 @@ luci-app-oled
 luci-app-onliner
 luci-app-oscam
 luci-app-partexp
+luci-app-passwall
+luci-app-passwall2
 luci-app-poweroff
 luci-app-pppoe-server
 luci-app-quickstart
@@ -108,8 +110,6 @@ network
 nikki
 oaf
 open-app-filter
-openwrt-passwall
-openwrt-passwall2
 openwrt-subconverter
 openwrt-tmate
 oscam
