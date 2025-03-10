@@ -105,6 +105,8 @@ luci-app-openvpn-client
 luci-app-openvpn-server
 luci-app-oscam
 luci-app-partexp
+luci-app-passwall
+luci-app-passwall2
 luci-app-poweroff
 luci-app-pppoe-relay
 luci-app-pppoe-server
@@ -166,13 +168,11 @@ nikki
 nps
 oaf
 open-app-filter
-openwrt-passwall-packages
-openwrt-passwall
-openwrt-passwall2
 openwrt-subconverter
 openwrt-tmate
 oscam
 parted
+passwall-packages
 qBittorrent-static
 qBittorrent
 qtbase
