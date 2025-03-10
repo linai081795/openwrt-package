@@ -1,4 +1,6 @@
 3ginfo
+OpenClashdev
+OpenClashmaster
 Wiwiz-PinPinWiFi
 adguardhome
 aliyundrive-fuse
