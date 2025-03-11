@@ -8,17 +8,14 @@ aliyundrive-webdav
 app-lucky
 ardhome
 ddns-go
-feed-netkeeper
 gost
 larespeedtest
 lua-maxminddb
 luci-app-3ginfo
 luci-app-adguardhome
 luci-app-advanced
-luci-app-advancedplus
 luci-app-aliyundrive-webdav
 luci-app-amlogic
-luci-app-argon-config
 luci-app-autoipsetadder
 luci-app-autotimeset
 luci-app-chatgpt
@@ -26,7 +23,6 @@ luci-app-cloudflarespeedtest
 luci-app-cupsd
 luci-app-ddns-go
 luci-app-ddnsto
-luci-app-design-config
 luci-app-eqosplus
 luci-app-floatip
 luci-app-gost
@@ -38,7 +34,6 @@ luci-app-lucky
 luci-app-mosdns
 luci-app-msd_lite
 luci-app-natter
-luci-app-netkeeper-interception
 luci-app-nginx-manager
 luci-app-nodogsplash
 luci-app-onliner
@@ -49,7 +44,6 @@ luci-app-poweroff
 luci-app-pushbot
 luci-app-quickstart
 luci-app-shutdown
-luci-app-smartdns
 luci-app-smartinfo
 luci-app-ssr-plus
 luci-app-store
@@ -61,10 +55,6 @@ luci-app-ttnode
 luci-app-wifidog
 luci-lib-iform
 luci-nginxer
-luci-proto-netkeeper
-luci-theme-argon
-luci-theme-design
-luci-theme-kucat
 lucky
 mosdns
 mosdnszz
@@ -73,11 +63,8 @@ multimedia
 nas-packages-luci
 nas-packages
 natter
-netkeeper-interception
-netkeeper
 network
 passwall-packages
-smartdns
 switch-lan-play
 upx-static
 v2dat
