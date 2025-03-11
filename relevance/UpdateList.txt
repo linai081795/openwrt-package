@@ -16,7 +16,6 @@ clud
 cpulimit-ng
 cpulimit
 ddns-go
-feed-netkeeper
 filebrowser
 gost
 iptvhelper
@@ -24,10 +23,8 @@ lua-maxminddb
 luci-app-3ginfo
 luci-app-adguardhome
 luci-app-advanced
-luci-app-advancedplus
 luci-app-alist
 luci-app-amlogic
-luci-app-argon-config
 luci-app-autoipsetadder
 luci-app-autotimeset
 luci-app-chatgpt
@@ -40,7 +37,6 @@ luci-app-cpulimit
 luci-app-cupsd
 luci-app-ddns-go
 luci-app-ddnsto
-luci-app-design-config
 luci-app-eqosplus
 luci-app-fileassistant
 luci-app-filebrowser
@@ -56,7 +52,6 @@ luci-app-mentohust
 luci-app-mosdns
 luci-app-msd_lite
 luci-app-natter
-luci-app-netkeeper-interception
 luci-app-nginx-manager
 luci-app-nginx-pingos
 luci-app-nikki
@@ -73,7 +68,6 @@ luci-app-pppoe-server
 luci-app-quickstart
 luci-app-rclone
 luci-app-shutdown
-luci-app-smartdns
 luci-app-smartinfo
 luci-app-socat
 luci-app-ssr-mudb-server
@@ -91,10 +85,6 @@ luci-app-wifidog
 luci-app-wolplus
 luci-lib-iform
 luci-nginxer
-luci-proto-netkeeper
-luci-theme-argon
-luci-theme-design
-luci-theme-kucat
 lucky
 mosdns
 mosdnszz
@@ -103,8 +93,6 @@ multimedia
 nas-packages-luci
 nas-packages
 natter
-netkeeper-interception
-netkeeper
 network
 nikki
 oaf
@@ -116,7 +104,6 @@ passwall-packages
 rclone-ng
 rclone-webui-react
 rclone
-smartdns
 smartmontools
 socat
 switch-lan-play
