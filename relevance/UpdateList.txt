@@ -114,6 +114,7 @@ oaf
 open-app-filter
 openwrt-subconverter
 openwrt-tmate
+openwrt-upx
 oscam
 passwall-packages
 pdnsd-alt
