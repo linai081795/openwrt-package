@@ -56,6 +56,7 @@ luci-app-mentohust
 luci-app-mosdns
 luci-app-msd_lite
 luci-app-natter
+luci-app-netspeedtest
 luci-app-nginx-manager
 luci-app-nikki
 luci-app-nodogsplash
@@ -68,6 +69,7 @@ luci-app-passwall
 luci-app-passwall2
 luci-app-poweroff
 luci-app-pushbot
+luci-app-qmodem
 luci-app-quickstart
 luci-app-rclone
 luci-app-serverchan
