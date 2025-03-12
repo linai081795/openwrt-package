@@ -89,6 +89,7 @@ luci-app-mosdns
 luci-app-msd_lite
 luci-app-mwan3helper
 luci-app-netdata
+luci-app-netspeedtest
 luci-app-nfs
 luci-app-nginx-manager
 luci-app-nikki
@@ -109,6 +110,7 @@ luci-app-pppoe-server
 luci-app-pptp-server
 luci-app-pushbot
 luci-app-qbittorrent
+luci-app-qmodem
 luci-app-quickstart
 luci-app-ramfree
 luci-app-rclone
