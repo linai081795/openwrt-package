@@ -103,6 +103,7 @@ openwrt-subconverter
 openwrt-tmate
 oscam
 passwall-packages
+quectel_cm-5G
 rclone-ng
 rclone-webui-react
 rclone
