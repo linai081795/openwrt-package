@@ -168,6 +168,8 @@ qBittorrent-static
 qBittorrent
 qtbase
 qttools
+quectel-cm
+quectel_cm-5G
 rblibtorrent
 rclone-ng
 rclone-webui-react
