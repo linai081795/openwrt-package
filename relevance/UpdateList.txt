@@ -69,7 +69,6 @@ luci-app-passwall
 luci-app-passwall2
 luci-app-poweroff
 luci-app-pushbot
-luci-app-qmodem
 luci-app-quickstart
 luci-app-rclone
 luci-app-serverchan
