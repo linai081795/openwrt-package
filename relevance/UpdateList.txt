@@ -1,7 +1,5 @@
 3ginfo
 OpenAppFilter
-OpenClashdev
-OpenClashmaster
 OpenWrt-nikki
 Rclone-OpenWrt
 Wiwiz-PinPinWiFi
@@ -19,6 +17,7 @@ autocore
 baidupcs-go
 baidupcs-web
 bcm27xx-eeprom
+bcm27xx-userland
 cdnspeedtest
 cgroupfs-mount
 clud
@@ -89,7 +88,6 @@ luci-app-mosdns
 luci-app-msd_lite
 luci-app-mwan3helper
 luci-app-netdata
-luci-app-netspeedtest
 luci-app-nfs
 luci-app-nginx-manager
 luci-app-nikki
@@ -102,15 +100,12 @@ luci-app-openvpn-client
 luci-app-openvpn-server
 luci-app-oscam
 luci-app-partexp
-luci-app-passwall
-luci-app-passwall2
 luci-app-poweroff
 luci-app-pppoe-relay
 luci-app-pppoe-server
 luci-app-pptp-server
 luci-app-pushbot
 luci-app-qbittorrent
-luci-app-qmodem
 luci-app-quickstart
 luci-app-ramfree
 luci-app-rclone
@@ -120,7 +115,6 @@ luci-app-smartinfo
 luci-app-socat
 luci-app-softethervpn
 luci-app-ssr-mudb-server
-luci-app-ssr-plus
 luci-app-store
 luci-app-supervisord
 luci-app-switch-lan-play
@@ -163,12 +157,10 @@ openwrt-subconverter
 openwrt-tmate
 oscam
 parted
-passwall-packages
 qBittorrent-static
 qBittorrent
 qtbase
 qttools
-quectel_cm-5G
 rblibtorrent
 rclone-ng
 rclone-webui-react
