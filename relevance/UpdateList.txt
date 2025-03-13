@@ -106,7 +106,6 @@ luci-app-pppoe-relay
 luci-app-pppoe-server
 luci-app-pushbot
 luci-app-qbittorrent
-luci-app-qmodem
 luci-app-quickstart
 luci-app-ramfree
 luci-app-rclone
