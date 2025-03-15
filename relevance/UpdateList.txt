@@ -1,4 +1,5 @@
 luci-app-advancedplus
+luci-app-design-config
 luci-app-netkeeper-interception
 luci-app-smartdns
 luci-app-wechatpush
@@ -10,6 +11,7 @@ luci-theme-argon-dark-mod
 luci-theme-argon-light-mod
 luci-theme-argon
 luci-theme-bootstrap-mod
+luci-theme-design
 luci-theme-ifit
 luci-theme-kucat
 luci-theme-opentopd
