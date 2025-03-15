@@ -76,6 +76,7 @@ msd_lite
 mt
 natter
 natter2
+openwrt-upx
 oscam
 package
 passwall-packages
