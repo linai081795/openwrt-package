@@ -33,7 +33,6 @@ luci-app-3ginfo
 luci-app-accesscontrol
 luci-app-adbyby-plus
 luci-app-adguardhome
-luci-app-advancedplus
 luci-app-aliyundrive-webdav
 luci-app-amlogic
 luci-app-arpbind
@@ -50,11 +49,13 @@ luci-app-control-weburl
 luci-app-cpulimit
 luci-app-cupsd
 luci-app-ddns-go
+luci-app-ddnsto
 luci-app-dockerman
 luci-app-eqosplus
 luci-app-fileassistant
 luci-app-filebrowser
 luci-app-filetransfer
+luci-app-floatip
 luci-app-frpc
 luci-app-frps
 luci-app-gost
@@ -62,14 +63,15 @@ luci-app-guest-wifi
 luci-app-ikoolproxy
 luci-app-iperf3-server
 luci-app-ipsec-server
+luci-app-istoreenhance
 luci-app-istorex
 luci-app-kodexplorer
+luci-app-linkease
 luci-app-lucky
 luci-app-mentohust
 luci-app-mosdns
 luci-app-msd_lite
 luci-app-mwan3helper
-luci-app-natter
 luci-app-natter2
 luci-app-netdata
 luci-app-netspeedtest
@@ -93,6 +95,7 @@ luci-app-pppoe-server
 luci-app-pptp-server
 luci-app-pushbot
 luci-app-qbittorrent
+luci-app-quickstart
 luci-app-ramfree
 luci-app-shutdown
 luci-app-socat
@@ -110,6 +113,7 @@ luci-app-timecontrol
 luci-app-turboacc
 luci-app-udp2raw
 luci-app-unblockneteasemusic
+luci-app-unishare
 luci-app-usb-printer
 luci-app-uugamebooster
 luci-app-verysync
@@ -122,14 +126,14 @@ luci-app-xlnetacc
 luci-app-zerotier
 luci-lib-docker
 luci-lib-fs
+luci-lib-iform
 luci-lib-nixio
+luci-nginxer
 lucky
 mentohust
 mosdns
 msd_lite
 mt
-nas-packages
-natter
 natter2
 nps
 oscam
@@ -160,4 +164,5 @@ verysync
 vlmcsd
 vsftpd-alt
 webd
+wrtbwmon
 xfrpc
