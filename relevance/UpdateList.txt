@@ -135,6 +135,7 @@ mentohust
 mosdns
 msd_lite
 mt
+nas-packages
 natter2
 nps
 oscam
