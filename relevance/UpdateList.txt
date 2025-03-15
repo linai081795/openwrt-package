@@ -1,4 +1,5 @@
 luci-app-advancedplus
+luci-app-argon-config
 luci-app-design-config
 luci-app-netkeeper-interception
 luci-app-smartdns
