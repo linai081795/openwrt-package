@@ -6,7 +6,6 @@ local fs   = require "nixio.fs"
 local util = require "nixio.util"
 local tp   = require "luci.template.parser"
 local uci=luci.model.uci.cursor()
-luci.sys.exec("echo '-' >/tmp/partexp.log&&echo 1 > /tmp/lucilogpos" )
   -- get all device names (sdX and mmcblkX)
   local target_devnames = {}
   for dev in fs.dir("/dev") do
@@ -14,7 +13,6 @@ luci.sys.exec("echo '-' >/tmp/partexp.log&&echo 1 > /tmp/lucilogpos" )
       or dev:match("^mmcblk%d+$")
       or dev:match("^sata[a-z]$")
       or dev:match("^nvme%d+n%d+$")
-      or dev:match("^vd[a-z]$")
       then
       table.insert(target_devnames, dev)
     end
