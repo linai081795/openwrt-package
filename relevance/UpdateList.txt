@@ -32,6 +32,7 @@ luci-app-istorex
 luci-app-lucky
 luci-app-mentohust
 luci-app-mosdns
+luci-app-msd_lite
 luci-app-natter
 luci-app-natter2
 luci-app-netspeedtest
@@ -55,6 +56,7 @@ luci-app-store
 luci-app-supervisord
 luci-app-switch-lan-play
 luci-app-syncthing
+luci-app-tcpdump
 luci-app-tencentddns
 luci-app-udp2raw
 luci-app-unblockneteasemusic
@@ -63,6 +65,7 @@ luci-app-wifidog
 lucky
 mentohust
 mosdns
+msd_lite
 nas-packages
 natter
 natter2
