@@ -37,6 +37,7 @@ luci-app-advancedplus
 luci-app-aliyundrive-webdav
 luci-app-amlogic
 luci-app-arpbind
+luci-app-autoipsetadder
 luci-app-autoreboot
 luci-app-autotimeset
 luci-app-baidupcs-web
@@ -66,6 +67,7 @@ luci-app-kodexplorer
 luci-app-lucky
 luci-app-mentohust
 luci-app-mosdns
+luci-app-msd_lite
 luci-app-mwan3helper
 luci-app-natter
 luci-app-natter2
@@ -124,6 +126,7 @@ luci-lib-nixio
 lucky
 mentohust
 mosdns
+msd_lite
 mt
 nas-packages
 natter
