@@ -74,6 +74,7 @@ mentohust
 mosdns
 msd_lite
 mt
+nas-packages
 natter
 natter2
 openwrt-upx
@@ -85,7 +86,6 @@ smartmontools
 socat
 switch-lan-play
 syncthing
-udp2raw
 upx-static
 v2dat
 v2ray-geodata
