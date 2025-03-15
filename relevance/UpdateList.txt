@@ -41,7 +41,6 @@ luci-app-natter2
 luci-app-netspeedtest
 luci-app-nginx-manager
 luci-app-nginx-pingos
-luci-app-nikki
 luci-app-npc
 luci-app-oled
 luci-app-onliner
