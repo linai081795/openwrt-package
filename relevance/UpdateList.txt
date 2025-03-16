@@ -34,6 +34,7 @@ luci-app-3ginfo
 luci-app-accesscontrol
 luci-app-adbyby-plus
 luci-app-adguardhome
+luci-app-alist
 luci-app-aliyundrive-webdav
 luci-app-amlogic
 luci-app-arpbind
