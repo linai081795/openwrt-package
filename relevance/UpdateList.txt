@@ -15,6 +15,7 @@ gost
 homebox
 luci-app-3ginfo
 luci-app-adguardhome
+luci-app-alist
 luci-app-aliyundrive-webdav
 luci-app-amlogic
 luci-app-autoipsetadder
