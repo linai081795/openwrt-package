@@ -86,6 +86,7 @@ smartmontools
 socat
 switch-lan-play
 syncthing
+udp2raw
 upx-static
 v2dat
 v2ray-geodata
