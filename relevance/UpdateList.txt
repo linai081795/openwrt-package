@@ -6,6 +6,7 @@ ddns-go
 gost
 homebox
 luci-app-adguardhome
+luci-app-alist
 luci-app-amlogic
 luci-app-autoipsetadder
 luci-app-autotimeset
