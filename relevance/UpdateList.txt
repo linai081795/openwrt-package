@@ -1,0 +1,13 @@
+luci-app-advancedplus
+luci-app-argon-config
+luci-app-design-config
+luci-app-netkeeper-interception
+luci-app-smartdns
+luci-app-wechatpush
+luci-proto-netkeeper
+luci-theme-argon
+luci-theme-design
+luci-theme-kucat
+netkeeper-interception
+netkeeper
+openwrt-smartdns
