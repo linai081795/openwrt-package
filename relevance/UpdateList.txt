@@ -37,7 +37,6 @@ luci-app-istorex
 luci-app-linkease
 luci-app-lucky
 luci-app-mentohust
-luci-app-mosdns
 luci-app-msd_lite
 luci-app-natter
 luci-app-natter2
@@ -72,7 +71,6 @@ luci-lib-iform
 luci-nginxer
 lucky
 mentohust
-mosdns
 msd_lite
 mt
 nas-packages
@@ -89,7 +87,5 @@ switch-lan-play
 syncthing
 udp2raw
 upx-static
-v2dat
-v2ray-geodata
 webd
 wrtbwmon
