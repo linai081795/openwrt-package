@@ -71,7 +71,6 @@ luci-app-kodexplorer
 luci-app-linkease
 luci-app-lucky
 luci-app-mentohust
-luci-app-mosdns
 luci-app-msd_lite
 luci-app-mwan3helper
 luci-app-natter2
@@ -133,7 +132,6 @@ luci-lib-nixio
 luci-nginxer
 lucky
 mentohust
-mosdns
 msd_lite
 mt
 nas-packages
@@ -162,8 +160,6 @@ udp2raw
 upx-static
 upx
 uugamebooster
-v2dat
-v2ray-geodata
 verysync
 vlmcsd
 vsftpd-alt
