@@ -24,7 +24,6 @@ luci-app-istoreenhance
 luci-app-istorex
 luci-app-linkease
 luci-app-lucky
-luci-app-mosdns
 luci-app-msd_lite
 luci-app-natter
 luci-app-natter2
@@ -53,7 +52,6 @@ luci-app-wrtbwmon
 luci-lib-iform
 luci-nginxer
 lucky
-mosdns
 msd_lite
 nas-packages
 natter
@@ -61,7 +59,5 @@ natter2
 passwall-packages
 switch-lan-play
 upx-static
-v2dat
-v2ray-geodata
 webd
 wrtbwmon
