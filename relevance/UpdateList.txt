@@ -1,6 +1,7 @@
 luci-app-advancedplus
 luci-app-argon-config
 luci-app-design-config
+luci-app-mosdns
 luci-app-netkeeper-interception
 luci-app-smartdns
 luci-app-wechatpush
@@ -16,6 +17,9 @@ luci-theme-design
 luci-theme-ifit
 luci-theme-kucat
 luci-theme-opentopd
+mosdns
 netkeeper-interception
 netkeeper
 openwrt-smartdns
+v2dat
+v2ray-geodata
