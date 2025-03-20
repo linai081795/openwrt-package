@@ -42,6 +42,7 @@ luci-app-autoipsetadder
 luci-app-autoreboot
 luci-app-autotimeset
 luci-app-baidupcs-web
+luci-app-beardropper
 luci-app-chatgpt-web
 luci-app-cifs-mount
 luci-app-cloudflarespeedtest
@@ -62,6 +63,7 @@ luci-app-frpc
 luci-app-frps
 luci-app-gost
 luci-app-guest-wifi
+luci-app-homeproxy
 luci-app-ikoolproxy
 luci-app-iperf3-server
 luci-app-ipsec-server
@@ -76,6 +78,7 @@ luci-app-mwan3helper
 luci-app-natter2
 luci-app-netdata
 luci-app-netspeedtest
+luci-app-netwizard
 luci-app-nfs
 luci-app-nginx-manager
 luci-app-nginx-pingos
@@ -96,6 +99,7 @@ luci-app-pppoe-server
 luci-app-pptp-server
 luci-app-pushbot
 luci-app-qbittorrent
+luci-app-qmodem
 luci-app-quickstart
 luci-app-ramfree
 luci-app-shutdown
@@ -130,7 +134,6 @@ luci-lib-fs
 luci-lib-iform
 luci-lib-nixio
 luci-nginxer
-lucky
 mentohust
 msd_lite
 mt
@@ -146,6 +149,8 @@ qBittorrent-static
 qBittorrent
 qtbase
 qttools
+quectel_cm-5G
+quectel_cm
 r8152
 rblibtorrent
 runc
