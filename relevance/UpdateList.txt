@@ -18,6 +18,7 @@ luci-app-ddnsto
 luci-app-eqosplus
 luci-app-floatip
 luci-app-gost
+luci-app-homeproxy
 luci-app-ikoolproxy
 luci-app-iperf3-server
 luci-app-istoreenhance
@@ -28,6 +29,7 @@ luci-app-msd_lite
 luci-app-natter
 luci-app-natter2
 luci-app-netspeedtest
+luci-app-netwizard
 luci-app-nginx-manager
 luci-app-nikki
 luci-app-npc
@@ -38,6 +40,7 @@ luci-app-passwall
 luci-app-passwall2
 luci-app-poweroff
 luci-app-pushbot
+luci-app-qmodem
 luci-app-quickstart
 luci-app-ssr-plus
 luci-app-store
@@ -51,12 +54,13 @@ luci-app-wifidog
 luci-app-wrtbwmon
 luci-lib-iform
 luci-nginxer
-lucky
 msd_lite
 nas-packages
 natter
 natter2
 passwall-packages
+quectel_cm-5G
+quectel_cm
 switch-lan-play
 upx-static
 webd
