@@ -46,6 +46,7 @@ luci-app-passwall
 luci-app-passwall2
 luci-app-poweroff
 luci-app-pushbot
+luci-app-qfirehose
 luci-app-qmodem
 luci-app-quickstart
 luci-app-shutdown
