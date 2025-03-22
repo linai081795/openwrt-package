@@ -4,7 +4,6 @@ luci-app-design-config
 luci-app-mosdns
 luci-app-netkeeper-interception
 luci-app-smartdns
-luci-app-wechatpush
 luci-proto-netkeeper
 luci-theme-argon
 luci-theme-design
