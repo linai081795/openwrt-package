@@ -89,6 +89,7 @@ luci-app-pppoe-server
 luci-app-pptp-server
 luci-app-pushbot
 luci-app-qbittorrent
+luci-app-qfirehose
 luci-app-qmodem
 luci-app-quickstart
 luci-app-ramfree
