@@ -15,7 +15,6 @@ cgroupfs-mount
 containerd
 cpulimit-ng
 cpulimit
-ddns-go
 ddns-scripts_aliyun
 ddns-scripts_dnspod
 docker
@@ -25,7 +24,6 @@ dsmboot
 filebrowser
 frp
 gost
-homebox
 ipv6-helper
 k3screenctrl
 k3wifi
@@ -40,7 +38,6 @@ luci-app-amlogic
 luci-app-arpbind
 luci-app-autoipsetadder
 luci-app-autoreboot
-luci-app-autotimeset
 luci-app-baidupcs-web
 luci-app-beardropper
 luci-app-chatgpt-web
@@ -51,10 +48,8 @@ luci-app-control-webrestriction
 luci-app-control-weburl
 luci-app-cpulimit
 luci-app-cupsd
-luci-app-ddns-go
 luci-app-ddnsto
 luci-app-dockerman
-luci-app-eqosplus
 luci-app-fileassistant
 luci-app-filebrowser
 luci-app-filetransfer
@@ -71,14 +66,11 @@ luci-app-istoreenhance
 luci-app-istorex
 luci-app-kodexplorer
 luci-app-linkease
-luci-app-lucky
 luci-app-mentohust
 luci-app-msd_lite
 luci-app-mwan3helper
 luci-app-natter2
 luci-app-netdata
-luci-app-netspeedtest
-luci-app-netwizard
 luci-app-nfs
 luci-app-nginx-manager
 luci-app-nginx-pingos
@@ -90,7 +82,6 @@ luci-app-onliner
 luci-app-openvpn-client
 luci-app-openvpn-server
 luci-app-oscam
-luci-app-partexp
 luci-app-passwall
 luci-app-passwall2
 luci-app-poweroff
@@ -169,5 +160,4 @@ verysync
 vlmcsd
 vsftpd-alt
 webd
-wrtbwmon
 xfrpc
