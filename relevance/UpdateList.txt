@@ -39,7 +39,6 @@ luci-app-autoipsetadder
 luci-app-autoreboot
 luci-app-baidupcs-web
 luci-app-beardropper
-luci-app-chatgpt-web
 luci-app-cifs-mount
 luci-app-cloudflarespeedtest
 luci-app-control-timewol
@@ -47,8 +46,11 @@ luci-app-control-webrestriction
 luci-app-control-weburl
 luci-app-cpulimit
 luci-app-cupsd
+luci-app-ddns-go
 luci-app-ddnsto
 luci-app-dockerman
+luci-app-eqosplus
+luci-app-fancontrol
 luci-app-fileassistant
 luci-app-filebrowser
 luci-app-filetransfer
@@ -65,6 +67,7 @@ luci-app-istoreenhance
 luci-app-istorex
 luci-app-kodexplorer
 luci-app-linkease
+luci-app-lucky
 luci-app-mentohust
 luci-app-msd_lite
 luci-app-mwan3helper
@@ -81,9 +84,11 @@ luci-app-onliner
 luci-app-openvpn-client
 luci-app-openvpn-server
 luci-app-oscam
+luci-app-parentcontrol
+luci-app-partexp
 luci-app-passwall
 luci-app-passwall2
-luci-app-poweroff
+luci-app-poweroffdevice
 luci-app-pppoe-relay
 luci-app-pppoe-server
 luci-app-pptp-server
@@ -103,6 +108,7 @@ luci-app-supervisord
 luci-app-switch-lan-play
 luci-app-syncdial
 luci-app-syncthing
+luci-app-taskplan
 luci-app-tcpdump
 luci-app-tencentddns
 luci-app-timecontrol
@@ -115,6 +121,8 @@ luci-app-uugamebooster
 luci-app-verysync
 luci-app-vlmcsd
 luci-app-vsftpd
+luci-app-vusb
+luci-app-watchcat-plus
 luci-app-webd
 luci-app-wifidog
 luci-app-wrtbwmon
@@ -158,5 +166,6 @@ uugamebooster
 verysync
 vlmcsd
 vsftpd-alt
+watchcat
 webd
 xfrpc
