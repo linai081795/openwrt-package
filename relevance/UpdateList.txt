@@ -1,2 +1,0 @@
-sirpdboy-package
-AdGuardHome1
