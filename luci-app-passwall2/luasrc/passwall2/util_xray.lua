@@ -584,7 +584,8 @@ function gen_config(var)
 	local inbounds = {}
 	local outbounds = {}
 	local routing = nil
-	local observatory = nil
+	local burstObservatory = nil
+ 	local strategy = nil
 	local COMMON = {}
 
 	local CACHE_TEXT_FILE = CACHE_PATH .. "/cache_" .. flag .. ".txt"
@@ -715,7 +716,7 @@ function gen_config(var)
 			local blc_node_tag = "blc-" .. blc_node_id
 			local is_new_blc_node = true
 			for _, outbound in ipairs(outbounds) do
-				if outbound.tag:find("^" .. blc_node_tag) == 1 then
+				if string.sub(outbound.tag, 1, #blc_node_tag) == blc_node_tag then
 					is_new_blc_node = false
 					valid_nodes[#valid_nodes + 1] = outbound.tag
 					break
@@ -740,7 +741,7 @@ function gen_config(var)
 		if fallback_node_id then
 			local is_new_node = true
 			for _, outbound in ipairs(outbounds) do
-				if outbound.tag:find("^" .. fallback_node_id) == 1 then
+				if string.sub(outbound.tag, 1, #fallback_node_id) == fallback_node_id then
 					is_new_node = false
 					fallback_node_tag = outbound.tag
 					break
@@ -758,19 +759,33 @@ function gen_config(var)
 				end
 			end
 		end
+		if _node.balancingStrategy == "leastLoad" then
+			strategy = {
+				type = _node.balancingStrategy,
+				settings = {
+					expected = _node.expected and tonumber(_node.expected) and tonumber(_node.expected) or 2,
+					maxRTT = "1s"
+				}
+			}
+		else
+			strategy = { type = _node.balancingStrategy or "random" }
+		end
 		table.insert(balancers, {
 			tag = balancer_tag,
 			selector = valid_nodes,
 			fallbackTag = fallback_node_tag,
-			strategy = { type = _node.balancingStrategy or "random" }
+			strategy = strategy
 		})
-		if _node.balancingStrategy == "leastPing" or fallback_node_tag then
-			if not observatory then
-				observatory = {
+		if _node.balancingStrategy == "leastPing" or _node.balancingStrategy == "leastLoad" or fallback_node_tag then
+			if not burstObservatory then
+				burstObservatory = {
 					subjectSelector = { "blc-" },
-					probeUrl = _node.useCustomProbeUrl and _node.probeUrl or nil,
-					probeInterval = _node.probeInterval or "1m",
-					enableConcurrency = true
+					pingConfig = {
+						destination = _node.useCustomProbeUrl and _node.probeUrl or nil,
+						interval = _node.probeInterval or "1m",
+						sampling = 3,
+						timeout = "5s"
+					}
 				}
 			end
 		end
@@ -1159,7 +1174,7 @@ function gen_config(var)
 		end
 	
 		dns = {
-			tag = "dns-in1",
+			tag = "dns-global",
 			hosts = {},
 			disableCache = (dns_cache and dns_cache == "0") and true or false,
 			disableFallback = true,
@@ -1195,7 +1210,7 @@ function gen_config(var)
 		local _remote_dns_ip = nil
 	
 		local _remote_dns = {
-			_flag = "remote",
+			tag = "dns-in-remote",
 			queryStrategy = (remote_dns_query_strategy and remote_dns_query_strategy ~= "") and remote_dns_query_strategy or "UseIPv4"
 		}
 
@@ -1256,7 +1271,7 @@ function gen_config(var)
 				table.insert(fakedns, fakedns6)
 			end
 			_remote_fakedns = {
-				_flag = "remote_fakedns",
+				tag = "dns-in-remote_fakedns",
 				address = "fakedns",
 			}
 			table.insert(dns.servers, _remote_fakedns)
@@ -1277,7 +1292,7 @@ function gen_config(var)
 			end
 
 			_direct_dns = {
-				_flag = "direct",
+				tag = "dns-in-direct",
 				address = direct_dns_udp_server,
 				port = tonumber(direct_dns_udp_port) or 53,
 				queryStrategy = (direct_dns_query_strategy and direct_dns_query_strategy ~= "") and direct_dns_query_strategy or "UseIP",
@@ -1342,21 +1357,21 @@ function gen_config(var)
 			})
 		end
 	
-		local default_dns_flag = "remote"
+		local default_dns_tag = "dns-in-remote"
 		if (not COMMON.default_balancer_tag and not COMMON.default_outbound_tag) or COMMON.default_outbound_tag == "direct" then
-			default_dns_flag = "direct"
+			default_dns_tag = "dns-in-direct"
 		end
 	
 		if dns.servers and #dns.servers > 0 then
 			local dns_servers = nil
 			for index, value in ipairs(dns.servers) do
-				if not dns_servers and value["_flag"] == default_dns_flag then
-					if value["_flag"] == "remote" and remote_dns_fake then
-						value["_flag"] = "default"
+				if not dns_servers and value.tag == default_dns_tag then
+					if value.tag == "dns-in-remote" and remote_dns_fake then
+						value.tag = "dns-in-default"
 						break
 					end
 					dns_servers = {
-						_flag = "default",
+						tag = "dns-in-default",
 						address = value.address,
 						port = value.port,
 						queryStrategy = value.queryStrategy
@@ -1384,11 +1399,18 @@ function gen_config(var)
 						end
 						dns_server.domains = value.domain
 						if value.shunt_rule_name then
-							dns_server["_flag"] = value.shunt_rule_name
+							dns_server.tag = "dns-in-" .. value.shunt_rule_name
 						end
 
 						if dns_server then
 							table.insert(dns.servers, dns_server)
+							table.insert(routing.rules, {
+								inboundTag = {
+									dns_server.tag
+								},
+								outboundTag = value.outboundTag or nil,
+								balancerTag = value.balancerTag or nil
+							})
 						end
 					end
 				end
@@ -1396,7 +1418,7 @@ function gen_config(var)
 
 			for i = #dns.servers, 1, -1 do
 				local v = dns.servers[i]
-				if v["_flag"] ~= "default" then
+				if v.tag ~= "dns-in-default" then
 					if not v.domains or #v.domains == 0 then
 						table.remove(dns.servers, i)
 					end
@@ -1476,7 +1498,7 @@ function gen_config(var)
 			-- 传出连接
 			outbounds = outbounds,
 			-- 连接观测
-			observatory = observatory,
+			burstObservatory = burstObservatory,
 			-- 路由
 			routing = routing,
 			-- 本地策略
@@ -1708,7 +1730,7 @@ function gen_dns_config(var)
 		}
 	
 		dns = {
-			tag = "dns-in1",
+			tag = "dns-global",
 			hosts = {},
 			disableCache = (dns_cache == "1") and false or true,
 			disableFallback = true,
@@ -1757,7 +1779,7 @@ function gen_dns_config(var)
 			end
 
 			local _remote_dns = {
-				_flag = "remote"
+				tag = "dns-in-remote"
 			}
 	
 			if remote_dns_udp_server then
@@ -1803,7 +1825,7 @@ function gen_dns_config(var)
 			})
 
 			local _direct_dns = {
-				_flag = "direct"
+				tag = "dns-in-direct"
 			}
 	
 			if direct_dns_udp_server then
@@ -1887,7 +1909,7 @@ function gen_dns_config(var)
 	
 		table.insert(routing.rules, {
 			inboundTag = {
-				"dns-in1"
+				"dns-global"
 			},
 			outboundTag = dns_out_tag
 		})

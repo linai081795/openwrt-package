@@ -1,7 +1,7 @@
+brook
 chinadns-ng
 dns2socks
 dns2tcp
-geoview
 gn
 hysteria
 ipt2socks
@@ -11,13 +11,13 @@ luci-app-passwall2
 microsocks
 naiveproxy
 pdnsd-alt
-shadowsocks-libev
 shadowsocks-rust
 shadowsocksr-libev
 simple-obfs
 sing-box
 ssocks
 tcping
+trojan-go
 trojan-plus
 trojan
 tuic-client

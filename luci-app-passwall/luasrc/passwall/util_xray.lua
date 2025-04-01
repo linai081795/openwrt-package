@@ -581,7 +581,8 @@ function gen_config(var)
 	local dns = nil
 	local fakedns = nil
 	local routing = nil
-	local observatory = nil
+	local burstObservatory = nil
+	local strategy = nil
 	local inbounds = {}
 	local outbounds = {}
 	local COMMON = {}
@@ -718,7 +719,7 @@ function gen_config(var)
 				local blc_node_tag = "blc-" .. blc_node_id
 				local is_new_blc_node = true
 				for _, outbound in ipairs(outbounds) do
-					if outbound.tag:find("^" .. blc_node_tag) == 1 then
+					if string.sub(outbound.tag, 1, #blc_node_tag) == blc_node_tag then
 						is_new_blc_node = false
 						valid_nodes[#valid_nodes + 1] = outbound.tag
 						break
@@ -743,7 +744,7 @@ function gen_config(var)
 			if fallback_node_id then
 				local is_new_node = true
 				for _, outbound in ipairs(outbounds) do
-					if outbound.tag:find("^" .. fallback_node_id) == 1 then
+					if string.sub(outbound.tag, 1, #fallback_node_id) == fallback_node_id then
 						is_new_node = false
 						fallback_node_tag = outbound.tag
 						break
@@ -761,19 +762,33 @@ function gen_config(var)
 					end
 				end
 			end
+			if _node.balancingStrategy == "leastLoad" then
+				strategy = {
+					type = _node.balancingStrategy,
+					settings = {
+						expected = _node.expected and tonumber(_node.expected) and tonumber(_node.expected) or 2,
+						maxRTT = "1s"
+					}
+				}
+			else
+				strategy = { type = _node.balancingStrategy or "random" }
+			end
 			table.insert(balancers, {
 				tag = balancer_tag,
 				selector = valid_nodes,
 				fallbackTag = fallback_node_tag,
-				strategy = { type = _node.balancingStrategy or "random" }
+				strategy = strategy
 			})
-			if _node.balancingStrategy == "leastPing" or fallback_node_tag then
-				if not observatory then
-					observatory = {
+			if _node.balancingStrategy == "leastPing" or _node.balancingStrategy == "leastLoad" or fallback_node_tag then
+				if not burstObservatory then
+					burstObservatory = {
 						subjectSelector = { "blc-" },
-						probeUrl = _node.useCustomProbeUrl and _node.probeUrl or nil,
-						probeInterval = _node.probeInterval or "1m",
-						enableConcurrency = true
+						pingConfig = {
+							destination = _node.useCustomProbeUrl and _node.probeUrl or nil,
+							interval = _node.probeInterval or "1m",
+							sampling = 3,
+							timeout = "5s"
+						}
 					}
 				end
 			end
@@ -1049,7 +1064,7 @@ function gen_config(var)
 						balancerTag = balancer_tag,
 						network = e["network"] or "tcp,udp",
 						source = source,
-						sourcePort = nil,
+						sourcePort = e["sourcePort"] ~= "" and e["sourcePort"] or nil,
 						port = e["port"] ~= "" and e["port"] or nil,
 						protocol = protocols
 					}
@@ -1358,7 +1373,7 @@ function gen_config(var)
 			-- 传出连接
 			outbounds = outbounds,
 			-- 连接观测
-			observatory = observatory,
+			burstObservatory = burstObservatory,
 			-- 路由
 			routing = routing,
 			-- 本地策略
