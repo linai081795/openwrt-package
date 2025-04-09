@@ -11,6 +11,12 @@ debug_subject="modem_dial"
 source "${SCRIPT_DIR}/generic.sh"
 touch $log_file
 
+exec_pre_dial()
+{
+    section=$1
+    /usr/share/qmodem/modem_hook.sh $section pre_dial
+}
+
 get_led()
 {
     config_foreach get_led_by_slot modem-slot
@@ -281,8 +287,15 @@ check_ip()
                         ;;
                 esac
                 ;;
+            "meig")
+                case $platform in
+                    "qualcomm")
+                        check_ip_command="AT+CGPADDR=1"
+                        ;;
+                esac
+                ;;
         esac
-        ipaddr=$(at "$at_port" "$check_ip_command" |grep +CGPADDR:)
+        ipaddr=$(at "$at_port" "$check_ip_command" | grep +CGPADDR:)
         if [ -n "$ipaddr" ];then
             if [ $mtk -eq 1 ] && echo "$ipv4_config" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$'; then
                 if [ "$pdp_type" = "ipv4v6" ];then
@@ -575,6 +588,7 @@ dial(){
     done
     set_if
     m_debug "dialing $modem_path driver $driver"
+    exec_pre_dial $modem_config
     case $driver in
         "qmi")
             qmi_dial
@@ -786,7 +800,15 @@ at_dial()
                 "qualcomm")
                     local cnmp=$(at ${at_port} "AT+CNMP?" | grep "+CNMP:" | sed 's/+CNMP: //g' | sed 's/\r//g')
                     at_command="AT+CNMP=$cnmp;+CNWINFO=1"
-                    cgdcont_command="AT+CGDCONT=1,\"IPV4V6\",\"$apn\""
+                    cgdcont_command="AT+CGDCONT=1,\"$pdp_type\",\"$apn\""
+                    ;;
+            esac
+            ;;
+        "meig")
+            case $platform in
+                "qualcomm")
+                    at_command=""
+                    cgdcont_command="AT+CGDCONT=1,\"$pdp_type\",\"$apn\""
                     ;;
             esac
             ;;
