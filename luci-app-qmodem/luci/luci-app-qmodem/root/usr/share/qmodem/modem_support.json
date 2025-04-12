@@ -658,6 +658,28 @@
                     "qmi",
                     "rndis"
                 ]
+            },
+            "t99w175": {
+                "manufacturer_id": "05c6",
+                "manufacturer": "foxconn",
+                "platform": "qualcomm",
+                "data_interface": "usb",
+                "define_connect": "1",
+                "modes": [
+                    "mbim",
+		    "rmnet"
+                ]
+            },
+            "t99w373": {
+                "manufacturer_id": "05c6",
+                "manufacturer": "foxconn",
+                "platform": "qualcomm",
+                "data_interface": "usb",
+                "define_connect": "1",
+                "modes": [
+                    "mbim",
+                    "rmnet"
+                ]
             }
         },
         "pcie": {
@@ -669,6 +691,24 @@
                 "modes": [
                     "qmi",
                     "gobinet",
+                    "mbim"
+                ]
+            },
+            "t99w175": {
+                "manufacturer": "foxconn",
+                "platform": "qualcomm",
+                "data_interface": "pcie",
+                "define_connect": "1",
+                "modes": [
+                    "mbim"
+                ]
+            },
+            "t99w373": {
+                "manufacturer": "foxconn",
+                "platform": "qualcomm",
+                "data_interface": "pcie",
+                "define_connect": "1",
+                "modes": [
                     "mbim"
                 ]
             },
@@ -1043,6 +1083,20 @@
                     "product_id": [
                         "9001",
                         "9011"
+                    ]
+                }
+            },
+            "foxconn": {
+                "qualcomm": {
+                    "vendor_id": [
+                        "17cb",
+	               	"05c6"
+                    ],
+                    "product_id": [
+                        "0306",
+                        "0308",
+	                "90d5",
+			"9025"
                     ]
                 }
             }
