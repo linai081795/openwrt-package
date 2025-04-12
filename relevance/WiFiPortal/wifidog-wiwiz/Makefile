@@ -89,7 +89,7 @@ define Package/wifidog-wiwiz/install
 	$(INSTALL_BIN) ./files/etc/uci-defaults/199-noredir $(1)/etc/uci-defaults/199-noredir
 
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/i18n
-	po2lmo ./po/zh_Hans/wifidog-wiwiz.po $(1)/usr/lib/lua/luci/i18n/wifidog-wiwiz.zh-cn.lmo	
+	po2lmo ./po/zh-cn/wifidog-wiwiz.po $(1)/usr/lib/lua/luci/i18n/wifidog-wiwiz.zh-cn.lmo	
 ifeq ($(CONFIG_NO_PORTAL),y)
 	$(INSTALL_BIN) ./files/etc/uci-defaults/299-noportal $(1)/etc/uci-defaults/299-noportal
 endif

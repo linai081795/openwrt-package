@@ -45,7 +45,7 @@ define Package/autokick-wiwiz/install
 	$(INSTALL_DATA) ./files/usr/lib/lua/luci/model/cbi/autokick.lua $(1)/usr/lib/lua/luci/model/cbi/autokick.lua
 
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/i18n
-	po2lmo ./po/zh_Hans/autokick.po $(1)/usr/lib/lua/luci/i18n/autokick.zh-cn.lmo	
+	po2lmo ./po/zh-cn/autokick.po $(1)/usr/lib/lua/luci/i18n/autokick.zh-cn.lmo	
 endef
 
 define Package/autokick-wiwiz/postinst
