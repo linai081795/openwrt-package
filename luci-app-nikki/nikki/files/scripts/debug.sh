@@ -41,12 +41,12 @@ fi
 \`\`\`json
 `
 ucode -S -e '
-import { connect } from "ubus";
-const ubus = connect();
-const config = ubus.call("uci", "get", { "config": "nikki" });
+import { cursor } from "uci";
+const uci = cursor();
+const config = uci.get_all("nikki");
 const result = {};
-for (let section_id in config.values) {
-    const section = config.values[section_id];
+for (let section_id in config) {
+    const section = config[section_id];
     const section_type = section[".type"];
 	if (result[section_type] == null) {
 		result[section_type] = [];
@@ -63,6 +63,11 @@ for (let section_type in result) {
 }
 for (let x in result["subscription"]) {
 	x["url"] = "*";
+}
+for (let x in result["lan_access_control"]) {
+	x["ip"] = "*";
+	x["ip6"] = "*";
+	x["mac"] = "*";
 }
 delete result["status"];
 delete result["editor"];
