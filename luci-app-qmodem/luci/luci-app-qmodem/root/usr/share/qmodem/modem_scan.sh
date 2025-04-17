@@ -40,11 +40,11 @@ get_default_metric()
 _get_associated_usb_by_path()
 {
     local cfg="$1"
-    echo $target_slot
+    m_debug $target_slot
     config_get _get_slot $cfg slot
     if [ "$target_slot" == "$_get_slot" ];then
         config_get associated_usb $cfg associated_usb
-        echo \[$target_slot\]associated_usb:$associated_usb
+        m_debug \[$target_slot\]associated_usb:$associated_usb
     fi
     
 }
@@ -171,9 +171,19 @@ scan_pcie_slot_interfaces()
           dun_device=$(ls "$wwan0_path" | grep wwan0at0)
           [ ! -z "$dun_device" ] &&  dun_device_path="$wwan0_path/$dun_device"
           [ ! -z "$dun_device_path" ] &&  dun_devices=$(basename "$dun_device_path") 
-	fi
+        fi
     fi
-    m_debug "net_devices: $net_devices dun_devices: $dun_devices"
+    #mt_t7xx device
+    wwan_path="$slot_path/wwan"
+    if [  -d "$wwan_path" ]; then
+    	net_devices=$(ls "$wwan_path" | grep -E "wwan[0-9]")
+    	devices_path="$wwan_path/$net_devices"
+    	if [ -d "$devices_path" ];then
+      		mbim_devices=$(ls "$devices_path" | grep -E "wwan[0-9]mbim[0-9]")
+      		dun_devices=$(ls "$devices_path" | grep -E "wwan[0-9]at[0-9]")
+    	fi
+    fi
+    echo "net_devices: $net_devices dun_devices: $dun_devices"
     at_ports="$dun_devices" 
     [ -n "$net_devices" ] && get_associate_usb $slot
     if [ -n "$associated_usb" ]; then
@@ -250,7 +260,7 @@ scan_usb_slot_interfaces()
             ;;
         esac 
     done
-    echo "net_devices: $net_devices tty_devices: $tty_devices"
+    m_debug "net_devices: $net_devices tty_devices: $tty_devices"
     at_ports="$tty_devices"
     validate_at_port
 }
@@ -291,6 +301,8 @@ match_config()
 
         [[ "$name" = *"T99W373"* ]] && name="t99w373"
 
+	[[ "$name" = *"SIM8380G"* ]] && name="SIM8380G-M2"
+
 	#rg200u-cn
     [[ "$name" = *"rg200u-cn"* ]] && name="rg200u-cn"
 
@@ -313,7 +325,7 @@ get_modem_model()
     local at_port=$1
     cgmm=$(at $at_port "AT+CGMM")
     sleep 1
-    cgmm_1=$(at $at_port "AT+CGMM?")
+    cgmm_1=$(at $at_port "AT+CGMM")
     name_1=$(echo -e "$cgmm" |grep "+CGMM: " | awk -F': ' '{print $2}')
     name_2=$(echo -e "$cgmm_1" |grep "+CGMM: " | awk -F'"' '{print $2} '| cut -d ' ' -f 1)
     name_3=$(echo -e "$cgmm" | sed -n '2p')
@@ -358,6 +370,7 @@ add()
     for trys in $(seq 1 3);do
         for at_port in $valid_at_ports; do
             m_debug "try at port $at_port;time $trys"
+	    sleeps 1
             get_modem_model "/dev/$at_port"
             [ $? -eq 0 ] && break || modem_name=""
         done
