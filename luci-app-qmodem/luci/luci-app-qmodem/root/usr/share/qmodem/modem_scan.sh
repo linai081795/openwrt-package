@@ -186,10 +186,9 @@ scan_pcie_slot_interfaces()
     echo "net_devices: $net_devices dun_devices: $dun_devices"
     at_ports="$dun_devices" 
     [ -n "$net_devices" ] && get_associate_usb $slot
-    if [ -n "$associated_usb" ]; then
+    if [ -n "$associated_usb" ] && [ -d "/sys/bus/usb/devices/$associated_usb" ]; then
         echo checking associated_usb: $associated_usb
         local assoc_usb_path="/sys/bus/usb/devices/$associated_usb"
-        [ ! -d "$assoc_usb_path" ] && return
         local slot_interfaces=$(ls $assoc_usb_path | grep -E "$associated_usb:[0-9]\.[0-9]+")
         echo checking slot_interfaces: $slot_interfaces
         for interface in $slot_interfaces; do
@@ -216,7 +215,6 @@ scan_pcie_slot_interfaces()
         done
         at_ports="$dun_devices $tty_devices"
     fi
-        
     validate_at_port
 }
 
@@ -323,17 +321,20 @@ match_config()
 get_modem_model()
 {
     local at_port=$1
+    sleep 1
     cgmm=$(at $at_port "AT+CGMM")
     sleep 1
-    cgmm_1=$(at $at_port "AT+CGMM")
+    cgmm_1=$(at $at_port "AT+CGMM?")
     name_1=$(echo -e "$cgmm" |grep "+CGMM: " | awk -F': ' '{print $2}')
     name_2=$(echo -e "$cgmm_1" |grep "+CGMM: " | awk -F'"' '{print $2} '| cut -d ' ' -f 1)
     name_3=$(echo -e "$cgmm" | sed -n '2p')
+    name_4=$(echo -e "$cgmm" |grep "+CGMM: " | awk -F'"' '{print $2} '| cut -d ' ' -f 1)
     modem_name=""
 
     [ -n "$name_1" ] && match_config "$name_1"
     [ -n "$name_2" ] && [ -z "$modem_name" ] && match_config "$name_2"
     [ -n "$name_3" ] && [ -z "$modem_name" ] && match_config "$name_3"
+    [ -n "$name_4" ] && [ -z "$modem_name" ] && match_config "$name_4"
     [ -z "$modem_name" ] && return 1
     return 0
 }
@@ -370,7 +371,6 @@ add()
     for trys in $(seq 1 3);do
         for at_port in $valid_at_ports; do
             m_debug "try at port $at_port;time $trys"
-	    sleeps 1
             get_modem_model "/dev/$at_port"
             [ $? -eq 0 ] && break || modem_name=""
         done
