@@ -1,0 +1,15 @@
+luci-theme-design
+luci-app-design-config
+18.06
+luci-app-advancedplus
+luci-theme-opentopd
+luci-theme-Light
+luci-theme-ifit
+luci-theme-argon-dark-mod
+luci-theme-argon-light-mod
+luci-theme-Butterfly-dark
+luci-theme-Butterfly
+luci-theme-bootstrap-mod
+lede
+openwrt-smartdns
+luci-app-mosdns
