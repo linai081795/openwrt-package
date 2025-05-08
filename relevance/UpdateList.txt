@@ -1,5 +1,9 @@
+argon-config
 luci-theme-design
 luci-app-design-config
 js
+luci-app-advancedplus
 master
 openwrt-smartdns
+master
+luci-app-mosdns
