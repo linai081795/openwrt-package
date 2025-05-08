@@ -1,3 +1,4 @@
+argon-config
 luci-theme-design
 luci-app-design-config
 18.06
@@ -12,4 +13,6 @@ luci-theme-Butterfly
 luci-theme-bootstrap-mod
 lede
 openwrt-smartdns
+LUCI-LUA-UCITRACK
+v5-lua
 luci-app-mosdns
