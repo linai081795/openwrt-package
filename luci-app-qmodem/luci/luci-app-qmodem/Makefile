@@ -6,7 +6,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=luci-app-qmodem
 LUCI_TITLE:=LuCI support for QWRT Modem
 LUCI_PKGARCH:=all
-PKG_VERSION:=2.8.0
+PKG_VERSION:=2.8.1
 PKG_LICENSE:=GPLv3
 PKG_LINCESE_FILES:=LICENSE
 PKG_MAINTAINER:=Tom <fjrcn@outlook.com>
@@ -32,7 +32,7 @@ LUCI_DEPENDS:=+luci-compat \
 		+PACKAGE_luci-app-qmodem_USE_TOM_CUSTOMIZED_QUECTEL_CM:quectel-CM-5G-M \
 		+PACKAGE_luci-app-qmodem_USING_QWRT_QUECTEL_CM_5G:quectel-CM-5G \
 		+PACKAGE_luci-app-qmodem_USING_NORMAL_QUECTEL_CM:quectel-cm \
-		+tom_modem \
+		+tom_modem +terminfo \
 		+jq +bc\
 		+coreutils +coreutils-stat \
 		+ndisc6
